@@ -1,0 +1,23 @@
+## MacOS
+.env*
+*.DS_Store
+.DS_Store
+.bundle
+.sass-cache
+node_modules
+package.json
+dist
+
+
+## Jekyll
+/_site/
+_site/
+.sass-cache/
+.jekyll-metadata
+.jekyll
+Gemfile
+Gemfile.lock
+
+
+## Personal
+개인메모.md
