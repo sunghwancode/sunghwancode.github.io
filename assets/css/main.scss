@@ -6,3 +6,10 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+@font-face {
+    font-family: 'HallymMjo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymMjo-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
