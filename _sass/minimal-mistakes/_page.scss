@@ -254,30 +254,30 @@ body {
    Social sharing
    ========================================================================== */
 
-.page__share {
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid $border-color;
+// .page__share {
+//   margin-top: 2em;
+//   padding-top: 1em;
+//   border-top: 1px solid $border-color;
 
-  @include breakpoint(max-width $small) {
-    .btn span {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-  }
-}
+//   @include breakpoint(max-width $small) {
+//     .btn span {
+//       border: 0;
+//       clip: rect(0 0 0 0);
+//       height: 1px;
+//       margin: -1px;
+//       overflow: hidden;
+//       padding: 0;
+//       position: absolute;
+//       width: 1px;
+//     }
+//   }
+// }
 
-.page__share-title {
-  margin-bottom: 10px;
-  font-size: $type-size-6;
-  text-transform: uppercase;
-}
+// .page__share-title {
+//   margin-bottom: 10px;
+//   font-size: $type-size-6;
+//   text-transform: uppercase;
+// }
 
 /*
    Page meta

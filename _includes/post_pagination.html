@@ -32,7 +32,7 @@
 {% endfor %}
 
 <!--두 번째 문단-->
-<!-- {% if prev_post or next_post %}
+{% if prev_post or next_post %}
   <nav class="pagination">
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
@@ -45,10 +45,10 @@
       <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
     {% endif %}
   </nav>
-{% endif %} -->
+{% endif %}
 
 
-{% if prev_post or next_post %}
+<!-- {% if prev_post or next_post %}
   <nav class="pagination_prev_next">
     {% if prev_post %}
       <a href="{{ prev_post.url }}" class="pagination_prev_next--pager"><span class="prev_next">이전 글  &nbsp</span>{{ prev_post.title }}</a>
@@ -61,4 +61,4 @@
       <a href="#" class="pagination_prev_next--pager disabled">가장 최근 글입니다</a>
     {% endif %}
   </nav>
-{% endif %}
+{% endif %} -->
