@@ -23,15 +23,18 @@
         {% assign tag_hashes = post_tags | split: ',' | sort %}
         <span class="page__taxonomy">
             <span itemprop="keywords">
-                {%- for hash in category_hashes -%}
+                <!-- (수정) 카테고리는 제외하고 키워드만 하기 -->
+                <!-- {%- for hash in category_hashes -%}
                     {%- assign keyValue = hash | split: '|' -%}
                     {%- capture category_word -%}{{ keyValue[1] | strip_newlines }}{%- endcapture -%}
                     <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item-category" rel="tag">{{ category_word }}</a>{%- unless forloop.last -%}<span class="sep"> </span>{%- endunless -%}
-                {%- endfor -%}
+                {%- endfor -%} -->
+
+                <!--(수정) 태그그가 일반 본문에 나와있는 태그처럼 네모 박스안에 있게 하기  default= class="page__taxonomy-item-tag" -->
                 {% for hash in tag_hashes %}
                     {% assign keyValue = hash | split: '|' %}
                     {% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-                    <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item-tag" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep"> </span>{% endunless %}
+                    <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep"> </span>{% endunless %}
                 {% endfor %}
             </span>
         </span>

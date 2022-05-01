@@ -24,7 +24,21 @@
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+    <!-- (수정)아래꺼 시간표시 새로 추가함 -->
+    <small>
+      <span class="dateColor">
+        <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i>{{ post.date | date: " %Y.%m.%d" }}
+      </span>
+      {% if site.category_archive.type and post.categories[0] and site.tag_archive.type and post.tags[0] %}
+        {%- include post__taxonomy.html -%}
+      {% endif %}
+    </small>
+    <!-- {% if post.date %}
+      <p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ post.date | date: "%B %d %Y" }}</p>
+    {% endif %} -->
     {% include page__meta.html type=include.type %}
+    <!-- (수정)소개글 제거
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    -->
   </article>
 </div>

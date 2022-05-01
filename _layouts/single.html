@@ -1,5 +1,5 @@
 ---
-classes: wide
+<!-- classes: wide --> 
 layout: default
 ---
 
@@ -18,7 +18,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork" style="margin-top:30px;"><!-- (수정)위에 간격 때문에 margin-top 추가 -->
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
@@ -26,11 +26,16 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
+        <header style="margin-bottom:80px;"> <!-- (수정)본문이랑 거리 띄우려고 margin-bottom 추가 -->
           {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
             <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>{% endif %}
           {% include page__meta.html %}
+          <!-- (수정)아래꺼 시간 표시, 카테고리-태그(page__taxonomy.html) 새로 추가하고 폰트 크기 줄임. -->
+          <p class="page__date" style="font-size: 0.75rem;"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }} <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: " %Y.%m.%d" }}</time></p>
+          <div style="font-size: 0.75rem;">
+            {% include page__taxonomy.html %}
+          </div>
         </header>
       {% endunless %}
 
@@ -51,9 +56,18 @@ layout: default
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
-        {% include page__date.html %}
+        <!--(수정) 글 아래에 태그, 카테고리, 날짜 표시되는거 삭제-->
+        <!-- {% include page__taxonomy.html %} -->
+        <!-- {% include page__date.html %} --> 
       </footer>
+
+      <!-- (수정) 링크 복사하기, 맨 위로 이동하기 기능 버튼 추가 -->
+      <div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%;">
+          <a class="btn btn--inverse"><i class="fas fa-link" aria-hidden="true"></i><span> Copy URL</span></a>
+          <a href="#" class="btn btn--warning"><i class="fas fa-angle-double-up" aria-hidden="true"></i><span> Top</span></a>
+        </div>
+      </div>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
@@ -69,9 +83,10 @@ layout: default
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
       <h2 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h2>
+      
       <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
+        {% for post in site.related_posts limit:10 %}
+          {% include archive-single.html %} <!-- (수정)recent posts 표시 방식 변경  default= % include archive-single.html type="grid" % -->
         {% endfor %}
       </div>
     </div>

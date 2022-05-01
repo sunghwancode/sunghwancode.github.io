@@ -73,7 +73,8 @@ body {
   line-height: 1;
 
   a {
-    color: $text-color;
+    color: #ff8383; //(수정) 제목 색상, 사이즈 변경  default= $text-color;
+    font-size: 1.4em;
     text-decoration: none;
   }
 
@@ -250,7 +251,7 @@ body {
   }
 }
 
-/*
+/* (수정) 소셜 공유 제거
    Social sharing
    ========================================================================== */
 
@@ -279,12 +280,12 @@ body {
 //   text-transform: uppercase;
 // }
 
-/* Utterances */
+/* Utterances (수정) 댓글 기능 더 넓게*/
 .utterances {
   max-width: 100% !important;
 }
 
-/* 404 error */
+/* 404 error (수정) 404에러 이미지 가운데 배치*/
 .aligncenter{
   display:block;
   margin:0 auto
@@ -297,7 +298,7 @@ body {
 
 .page__meta {
   margin-top: 2em;
-  color: $muted-text-color;
+  color: #939393; //$muted-text-color;
   font-family: $sans-serif;
   font-size: $type-size-6;
 
@@ -327,6 +328,7 @@ body {
    ========================================================================== */
 
 .page__taxonomy {
+  margin: 0px; //(수정) Tags, Categories 간격 넓은거 삭제
   .sep {
     display: none;
   }
@@ -392,7 +394,7 @@ body {
   list-style: none;
 
   @include breakpoint($large) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr); // (수정)태그,카테고리 배치 6개단위로 default= repeat(3, 1fr);
   }
 
   a {
@@ -538,7 +540,7 @@ body {
   }
 
   a {
-    color: inherit;
+    //color: inherit; //(수정) 모든 페이지에서 태그/카테고리/제목 색상이 일정하게 나오게 하기
     text-decoration: none;
   }
 }

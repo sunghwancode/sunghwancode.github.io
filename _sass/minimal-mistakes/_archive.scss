@@ -19,6 +19,12 @@
 }
 
 .archive__item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  //color: rgb(252, 174, 85);
+  //(수정) 본문 아래에 related posts 표시 일렬로 만들고 색상 변경
+
   position: relative;
 
   a {
@@ -44,7 +50,11 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
+  
+  margin-top: 5px;
+  margin-right: 10px;
+  // margin-bottom: 0.25em; //(수정) 본문 아래의 related posts 간격 줄이기위해 margin-top 새로 추가
+
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;

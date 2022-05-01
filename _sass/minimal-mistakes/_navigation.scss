@@ -515,7 +515,7 @@
   .nav__title {
     color: #fff;
     font-size: $type-size-6;
-    background: #498e9b; //$primary-color;
+    background: $primary-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -545,9 +545,9 @@
     line-height: 1.5;
     border-bottom: 1px solid $border-color;
 
-    &:hover {
-      color: $text-color;
-    }
+    // &:hover { //(수정) 이거 주석처리해야 마우스 올렸을 때 색상 안변함
+    //   color: $text-color;
+    // }
   }
 
   li ul > li a {

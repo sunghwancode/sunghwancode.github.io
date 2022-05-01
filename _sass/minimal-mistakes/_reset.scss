@@ -4,22 +4,22 @@
 
 * { box-sizing: border-box; }
 
-html {
+html { //(수정) 폰트 수정해야 블로그 전체 글자 크기 변함
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
   background-color: $background-color;
-  font-size: 16px;
+  font-size: 16px; //default 16px
 
   @include breakpoint($medium) {
-    font-size: 18px;
+    font-size: 16px; //default 18px 본문 사이즈
   }
 
   @include breakpoint($large) {
-    font-size: 20px;
+    font-size: 16px; //default 20px 마크다운 문법
   }
 
   @include breakpoint($x-large) {
-    font-size: 22px;
+    font-size: 16px; //default 22px 제목 사이즈
   }
 
   -webkit-text-size-adjust: 100%;
@@ -33,12 +33,12 @@ body { margin: 0; }
 /* Selected elements */
 
 ::-moz-selection {
-  color: #fff;
+  color: rgb(255, 85, 0);  //#fff;
   background: #000;
 }
 
 ::selection {
-  color: #fff;
+  color: rgb(255, 85, 0);  //#fff;
   background: #000;
 }
 
