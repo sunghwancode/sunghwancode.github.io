@@ -2,8 +2,6 @@
 .env*
 *.DS_Store
 .DS_Store
-.bundle
-.sass-cache
 node_modules
 package.json
 dist
@@ -11,12 +9,20 @@ dist
 
 ## Jekyll
 /_site/
-_site/
-.sass-cache/
+_site
 .jekyll-metadata
+.jekyll-cache
 .jekyll
-Gemfile
+.sass-cache
+_asset_bundler_cache
+
+# Ruby Gem
+*.gem
+.bundle
 Gemfile.lock
+Gemfile
+**/vendor/bundle
+
 
 
 ## Personal
