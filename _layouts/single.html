@@ -2,6 +2,18 @@
 <!-- classes: wide --> 
 layout: default
 ---
+<script>
+  function copy(){
+    const url = this.location.origin + this.location.pathname // 링크 주소 변수에 담기
+    const el = document.createElement('textarea'); // 복사하기 위해 임시로 textarea 생성
+    el.value = url; // textarea에 주소 담기
+    document.body.appendChild(el); // textarea 를 body에 연결
+    el.select(); // textarea 내용 선택
+    document.execCommand('copy');	// 복사
+    document.body.removeChild(el); // 만들었던 textarea 삭제
+    document.getElementById("copyURL").innerHTML = '<i class="fas fa-link" aria-hidden="true"></i> Copied!'; // 버튼 텍스트 Copied! 로 바꾸기
+  }
+</script>
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -64,7 +76,7 @@ layout: default
       <!-- (수정) 링크 복사하기, 맨 위로 이동하기 기능 버튼 추가 -->
       <div>
         <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%;">
-          <a class="btn btn--inverse"><i class="fas fa-link" aria-hidden="true"></i><span> Copy URL</span></a>
+          <a id="copyURL" onclick="copy()" class="btn btn--inverse"><i class="fas fa-link" aria-hidden="true"></i><span> Copy URL</span></a>
           <a href="#" class="btn btn--warning"><i class="fas fa-angle-double-up" aria-hidden="true"></i><span> Top</span></a>
         </div>
       </div>
