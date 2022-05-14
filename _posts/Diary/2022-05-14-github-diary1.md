@@ -26,8 +26,7 @@ https로 백엔드 서버에 접속하게 하고싶은데 GCP에서 제공하는
 </center>
 <br>
 
-옆에 물음표를 클릭하면 어떠한 상황에서 FAILED_NOT_VISIBLE 이 표시되는지 메뉴얼이 나와있는데,
-(https://cloud.google.com/load-balancing/docs/ssl-certificates/troubleshooting?authuser=2&_ga=2.33592745.-989404064.1647441538&_gac=1.118880379.1652370276.Cj0KCQjw4PKTBhD8ARIsAHChzRL6q5AWxkcK5bffVCFzgpGNInQZsfAOj6q-bVp3U3MzaP9UOVso8FEaAiwXEALw_wcB#domain-status)\
+옆에 물음표를 클릭하면 어떠한 상황에서 FAILED_NOT_VISIBLE 이 표시되는지 [메뉴얼](https://cloud.google.com/load-balancing/docs/ssl-certificates/troubleshooting?authuser=2&_ga=2.33592745.-989404064.1647441538&_gac=1.118880379.1652370276.Cj0KCQjw4PKTBhD8ARIsAHChzRL6q5AWxkcK5bffVCFzgpGNInQZsfAOj6q-bVp3U3MzaP9UOVso8FEaAiwXEALw_wcB#domain-status)이 나와있는데,
 
 결과적으로는 내가 인증서에 입력해야할 도메인주소를 잘못 입력해서 발생한 문제였었다.
 
