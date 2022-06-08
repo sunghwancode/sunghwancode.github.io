@@ -4,7 +4,7 @@ title: "팀 프로젝트 - 1주차"
 categories:
   - Diary
 tags:
-  - [Diary, GCP, Https]
+  - [Diary, GCP, Https, TeamProject]
 
 toc: true
 toc_sticky: true
