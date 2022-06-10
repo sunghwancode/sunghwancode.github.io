@@ -36,8 +36,6 @@ body {
 }
 
 .page {
-  line-height: 1.75;
-
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
@@ -91,6 +89,8 @@ body {
 }
 
 .page__content {
+  line-height: 1.75; // (수정)추가
+
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
