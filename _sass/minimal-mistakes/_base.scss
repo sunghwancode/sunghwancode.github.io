@@ -13,7 +13,7 @@ body {
   padding: 0;
   color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.5;
+  line-height: 1.75; //line-height: 1.5; (수정)
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -126,7 +126,7 @@ blockquote {
 /* links */
 
 a {
-  text-decoration: none; //밑줄 제거 추가한거 
+  text-decoration: none; //밑줄 제거 추가한거
 
   &:focus {
     @extend %tab-focus;
