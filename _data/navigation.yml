@@ -12,3 +12,6 @@ main:
   #   url: /sitemap/
   # - title: "Category"
   #   url: /categories/
+
+    - title: "Search"
+      url: /search/
