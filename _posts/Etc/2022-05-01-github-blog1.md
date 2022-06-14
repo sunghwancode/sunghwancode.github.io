@@ -41,10 +41,24 @@ toc_sticky: true
 <img src="../../assets/images/blog-fontsize.png" width="80%">
 </center>
 
-* #### 폰트 색상 변경하기
-<center>
-<img src="../../assets/images/blog-color.png" width="80%">
-</center>
+* #### 폰트 색상 변경하기 + custom css 파일 만들기
+
+  ##### 1. _custom.scss 파일 생성하기
+  _sass / minimal-mistakes / skins 폴더 안에다가 생성해주면 되는데,  
+  나는 편하게 기존의 파일 하나를 복붙(나는 _dark.scss 파일을 복붙했다)해서 이름을 _custom.scss 으로 바꾸어주었다.
+
+  ##### 2. _config.yml 파일에서 minimal_mistakes_skin: "custom" 를 추가해준다.
+  만약에 1번에서 내가 파일을 _mysetting.scss 으로 만들어줬다면 minimal_mistakes_skin: "mysetting" 이라고 추가하면 된다.
+  <center>
+  <img src="../../assets/images/blog-custom.png" width="80%">
+  </center>
+
+  ##### 3. 폰트 색상을 수정해주기
+  VScode에서 ```$text-color``` 를 검색해 보면 해당 값이 들어있는 모든 색상이 일괄적으로 적용이 된다.  
+  그래서 제목의 색상만 바꾸고 싶다면 _page.scss 파일 안에 제목에 해당하는 부분의 색상 값을 직접 수정하면 된다.
+  <center>
+  <img src="../../assets/images/blog-color.png" width="80%">
+  </center>
 
 * #### 폰트 색상 일정하게 표시되도록하기
   만약 내가 설정한 색상과 다르게 표시되는 부분이 있다면 아래 두가지 작업을 진행해보자.  
