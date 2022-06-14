@@ -30,7 +30,7 @@
                     <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item-category" rel="tag">{{ category_word }}</a>{%- unless forloop.last -%}<span class="sep"> </span>{%- endunless -%}
                 {%- endfor -%} -->
 
-                <!--(수정) 태그그가 일반 본문에 나와있는 태그처럼 네모 박스안에 있게 하기  default= class="page__taxonomy-item-tag" -->
+                <!--(수정) 태그가 일반 본문에 나와있는 태그처럼 네모 박스안에 있게 하기  default= class="page__taxonomy-item-tag" -->
                 {% for hash in tag_hashes %}
                     {% assign keyValue = hash | split: '|' %}
                     {% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}

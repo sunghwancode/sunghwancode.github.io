@@ -11,11 +11,7 @@ $code-background-color: mix(#000, $background-color, 15%) !default;
 $code-background-color-dark: mix(#000, $background-color, 20%) !default;
 $form-background-color: mix(#000, $background-color, 15%) !default;
 $footer-background-color: mix(#000, $background-color, 30%) !default;
-$link-color: rgb(
-  246,
-  216,
-  24
-) !default; //(수정) default= mix($primary-color, $text-color, 40%)
+$link-color: rgb(246, 216, 24) !default; //(수정) default= mix($primary-color, $text-color, 40%)
 $link-color-hover: mix(#fff, $link-color, 25%) !default;
 $link-color-visited: mix(#000, $link-color, 25%) !default;
 $masthead-link-color: $text-color !default;
