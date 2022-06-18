@@ -78,6 +78,13 @@
             <span class="nav__sub-title"></span>
             <ul>
                 {% for category in site.categories %}
+                {% if category[0] == "Project" %}
+                <li><a href="/categories/project" class="">Project ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                 {% if category[0] == "Debug" %}
                 <li><a href="/categories/debug" class="">Debug ({{category[1].size}})</a></li>
                 {% endif %}
