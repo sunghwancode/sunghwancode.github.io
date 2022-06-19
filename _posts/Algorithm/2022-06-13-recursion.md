@@ -66,6 +66,8 @@ calculateTail(4) // 24
 
 ### 재귀함수로 구할 수 있는 것
 
+
+
 * #### 팩토리얼([factorial](https://ko.wikipedia.org/wiki/%EA%B3%84%EC%8A%B9){:target="_blank"}, 1에서 n까지의 곱)
 
 ```javascript
@@ -77,6 +79,7 @@ function calculate(num){
 
 calculate(4) // 24
 ```
+
 
 * #### 거듭제곱 구하기 (x^n)
 
@@ -113,6 +116,7 @@ function binary(number){
 binary(20) // '10100'
 ```
 
+
 * #### 최대공약수 구하기 - 유클리드 호제법(Euclid's Algorithm)
 
 ```javascript
@@ -132,6 +136,18 @@ calculate(4, 15) // 1
 calculate(4, 16) // 4
 ```
 > 최소공배수는 두 수의 곱을 최대공약수로 나누면 구할 수 있다. ```a * b / caculate(a, b)```
+
+
+
+* #### 피보나치 수열([Fibonacci numbers](https://ko.wikipedia.org/wiki/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98_%EC%88%98){:target="_blank"})
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/FibonacciBlocks.png"/>
+
+
+```javascript
+
+```
+
 
 참고 링크:  
 [https://wayhome25.github.io/cs/2017/04/15/cs-16-1-recursion/](https://wayhome25.github.io/cs/2017/04/15/cs-16-1-recursion/){:target="_blank"}
