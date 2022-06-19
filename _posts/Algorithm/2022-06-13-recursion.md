@@ -141,7 +141,9 @@ calculate(4, 16) // 4
 
 * #### 피보나치 수열([Fibonacci numbers](https://ko.wikipedia.org/wiki/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98_%EC%88%98){:target="_blank"})
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Fibonacci_Squares.svg" width="250px"/> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Fibonacci_Spiral.svg" width="250px"/>
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Fibonacci_Squares.svg" width="35%"/> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Fibonacci_Spiral.svg" width="35%"/>
+</center>  
 
 
 ```javascript
@@ -161,8 +163,8 @@ fib(6) // 8
 
 >피보나치 수열은 첫 번째 항과 두 번째 항이 1이며 그 뒤의 항은 바로 앞 두 항의 합인 수열이다. 이 수열의 항을 피보나치 수(Fibonacci Number)라고 부른다. 편의상 0을 0번째 항으로 놓기도 한다.
 
-| num | fib(num -1) + fib(num -2) | result (피보나치 수)|
-|-|-|-|
+| num | fib(num -1) + fib(num -2) | return (피보나치 수)|
+|:-:|:-:|:-:|
 | 0 | | 0 |
 | 1 | | 1 |
 | 2 | 1 + 0 | 1 |

@@ -35,5 +35,6 @@ td {
 tr,
 td,
 th {
+  border: 1px solid mix(rgb(120, 120, 120), $border-color, 50%); //(수정) 원래 없었는데 테이블 칸 보이게 추가함
   vertical-align: middle;
 }
