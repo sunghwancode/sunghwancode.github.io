@@ -2,7 +2,7 @@
 title: "재귀함수(Recursive Function)"
 
 categories:
-  - Algorithm
+  - Javascript
 tags:
   - [재귀함수]
 
