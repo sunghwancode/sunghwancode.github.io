@@ -10,10 +10,60 @@ toc: true
 toc_sticky: true
 ---
 
+### 콜백 함수를 쓰는 이유?
+예를 들어 1에서 10의 숫자들을 출력해는 함수가 있다고 해보자.
+```javascript
+function numbers(){
+  for(let i = 1; i <= 10; i++){
+    console.log(i)
+  }
+}
+
+numbers() // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+```
+
+이 함수를 홀수만 출력해주는 함수로 쓰고 싶다면 직접 내부의 코드를 수정해주어야 한다.
+
+```javascript
+function numbers(){
+  for(let i = 0; i <= 10; i++){
+    if(i % 2 === 1) console.log(i)
+  }
+}
+
+numbers() // 1, 3, 5, 7, 9
+```
+
+만약 이 함수를 다시 짝수만 출력해주는 함수로 쓰고 싶다면 또 다시 직접 코드를 수정해야 한다.  
+그렇다면 상황에 따라 원하는 결과를 얻게하려면 어떻게 해야할까?
+
+```javascript
+function numbers(callback){
+  for(let i = 0; i <= 10; i++){
+    callback(i)
+  }
+}
+
+function odd(n){ // 홀수 찾기
+  if(n % 2 === 1) console.log(n)
+}
+
+function even(n){ // 짝수 찾기
+  if(n % 2 === 0) console.log(n)
+}
+
+numbers(odd) // 1, 3, 5, 7, 9
+numbers(even) // 0, 2, 4, 6, 8, 10
+```
+
+이 처럼 함수를 새로 정의하지 않고, 공통된 함수는 유지하되 경우에 따라 다른 결과를 얻고 싶을 때 **콜백 함수** 를 쓰게된다.
+
+
+
+
 ### 콜백 함수의 구조
 
-콜백 함수는 **다른 함수의 매개변수로 들어가는 함수** 를 말한다. 매개변수로 넘겨받은 함수는 일단 넘겨받고, 때가 되면 나중에 호출(called back)한다.  
-특정 기능이 있는 함수를 콜백 함수라고 정의하는 것이 아니라 일반 함수를 콜백의 용도로 사용하는 것이다.  
+콜백 함수는 **다른 함수의 매개변수로 들어가는 함수** 를 말한다. 매개변수로 넘겨받은 함수는 일단 넘겨받고, 때가 되면 나중에 호출(called back)한다. 특정 기능이 있는 함수를 콜백 함수라고 정의하는 것이 아니라 일반 함수를 콜백의 용도로 사용하는 것이다.  
 
 ```javascript
 function plus(a, b, callback) {  // callback 은 콜백 함수가 들어갈 자리
@@ -32,8 +82,6 @@ plus(10, 5, result); // 15
 ---
 
 ### 콜백 함수를 쓰는 이유
-
-콜백 함수는 콜백 함수만의 특별한 기능이 있다기 보다는 함수를 활용하는 하나의 방식이라고 이해하면 될 것 같다.  
 
 * #### 코드의 재사용성
 
@@ -85,10 +133,10 @@ function 식사패턴A() {
     setTimeout(() => {
         console.log('07:00 아침식사');
     }, 1000);
-  setTimeout(() => {
+    setTimeout(() => {
         console.log('13:00 점심식사');
     }, 4000);
-  setTimeout(() => {
+    setTimeout(() => {
         console.log('20:00 저녁식사');
     }, 2000);
 }
