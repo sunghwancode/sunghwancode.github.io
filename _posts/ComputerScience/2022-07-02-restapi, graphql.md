@@ -4,7 +4,7 @@ title: "REST API 와 GraphQL"
 categories:
   - ComputerScience
 tags:
-  - [API, REST API, GraphQL]
+  - [Network, Http]
 
 toc: true
 toc_sticky: true
