@@ -2,7 +2,7 @@
 title: "도커(Docker) 명령어 / 설치 셋팅"
 
 categories:
-  - Backend
+  - Docker
 tags:
   - [Docker]
 
