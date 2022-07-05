@@ -10,6 +10,9 @@ toc: true
 toc_sticky: true
 ---
 
+> 솔직히 아직 제대로 이해하고 있지 않은 부분도 있고 내용도 부족하다고 생각하기 때문에  
+> 나중에 다시 공부하게되면 수정해야할 것 같다.
+
 ## API 란?
 
 **API**는 **Application Programing Interface**의 약자로,  

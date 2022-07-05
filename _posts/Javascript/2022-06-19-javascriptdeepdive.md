@@ -10,6 +10,7 @@ toc: true
 toc_sticky: true
 ---
 
+> 공부한 내용들은 해당 글로 링크를 걸어두었습니다.
 
 # 모던 자바스크립트 Deep Dive
 
