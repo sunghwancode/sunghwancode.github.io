@@ -13,6 +13,7 @@
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "custom" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+future: true # (수정) 작성한 글이 안보일 때 해결 방법 중 하나. (https://stackoverflow.com/questions/30625044/jekyll-post-not-generated)
 
 # Site Settings
 locale: "en-US"
