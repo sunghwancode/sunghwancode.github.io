@@ -28,6 +28,28 @@ toc_sticky: true
 <img src="../../assets/images/webrick.png" width="80%">
 </center>
 
+
+* #### 글을 추가해도 실제로 반영이 안되는 문제
+
+가끔 글을 작성하고 push까지 날렸는데도 실제 블로그에는 업데이트가 안되는 경우가 있다.  
+그럴 때는 이 방법들을 시도해보자.  [https://stackoverflow.com/questions/30625044/jekyll-post-not-generated](https://stackoverflow.com/questions/30625044/jekyll-post-not-generated){:target='_blank'}
+
+1. _config.yml 파일에 ```future: true``` 를 추가. (포스팅 일자가 현재시각보다 미래인 경우에도 표시되도록 설정해주는 것)
+2. 카테고리를 잘 입력했고 해당 카테고리도 존재하는지, _post 폴더 안에 작성한게 맞는지 등등 체크.  
+3. 포스팅 파일 -> 상단의 옵션 부분에 ```published: true``` 를 추가. (작성한 글을 공개/비공개하는 설정)
+```
+toc: true
+toc_sticky: true
+published: true   
+```
+
+* #### 브랜치를 변경했을 시 Repository 설정에서도 변경해주기
+
+만약에 기존에 master 이름의 브랜치에서 main 이름의 브랜치로 변경했을 시,
+레포지토리에서 -> Settings -> Pages 메뉴에 들어가보면 ```Source``` 항목에 
+```Branch: master``` ```/(root)``` 이렇게 되어있을 것이다.  
+master 부분을 main으로 변경해줘야 블로그가 동작할 때 정상적으로 인식하게된다.
+
 ---
 
 ### 꾸미기 팁
@@ -109,3 +131,4 @@ Gemfile
 <center>
 <img src="../../assets/images/blog-comment.png" width="80%">
 </center>
+
