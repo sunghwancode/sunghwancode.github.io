@@ -71,3 +71,5 @@ toc_sticky: true
 그러다가 [https://www.reddit.com/r/Python/comments/28fr54/what_type_of_string_encoding_is/](https://www.reddit.com/r/Python/comments/28fr54/what_type_of_string_encoding_is/){:target='_blank'} 에서 보다가 갑자기 깨달은 사실..  
 
 위에서 눈치챈 사람이 있었는지는 모르지만 ```User-agent``` 부분에서 ```\x00U\x00s\x00e\x00r\x00-\x00a\x00g\x00e\x00n\x00t``` 이렇게 변환되어 나온다고 했었는데... 자세히 보면 ```\x00``` 부분만 모두 제거해 보면 ```User-agent``` 가 된다.. 그냥 \x00 만 모두 삭제해주면 되는 거였다.
+
+그리고 결과적으로는 다른 작업 없이 response 응답 객체안에 data값을 직접 불러오면 콘솔로그와는 다르게 알아서 UTF-8로 변환해서(?) 읽어올 수 있는 것 같다.
