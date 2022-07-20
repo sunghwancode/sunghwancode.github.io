@@ -92,6 +92,14 @@ class StudentData {
 >클래스 내부의 캡슐화된 변수를 말한다. 데이터 멤버 또는 **멤버 변수**라고도 부른다. 클래스 필드는 인스턴스의 프로퍼티 또는 정적 프로퍼티가 될 수 있다. 쉽게 말해, 자바스크립트의 생성자 함수에서 this에 추가한 프로퍼티를 클래스 기반 객체지향 언어에서는 클래스 필드라고 부른다.
 >
 >[https://poiemaweb.com/es6-class](https://poiemaweb.com/es6-class){:target='_blank'}
+>
+>---
+>
+>"protected 프로퍼티 명 앞엔 밑줄 _이 붙습니다.  
+>자바스크립트에서 강제한 사항은 아니지만, 밑줄은 프로그래머들 사이에서 외부 접근이 불가능한 프로퍼티나 메서드를 나타낼 때 씁니다."
+>
+>[https://ko.javascript.info/private-protected-properties-methods](https://ko.javascript.info/private-protected-properties-methods){:target='_blank'}
+
 
 * Snake Case ```snake_case``` ```SNAKE_CASE```  
 스네이크 케이스는 각 단어들을 언더바( _ )로 이어주는 방식을 말한다.  
